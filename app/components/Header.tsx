@@ -16,6 +16,7 @@ import * as React from "react";
 const pages = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
+  { label: "Portfolio", href: "https://rolniuq.github.io/portfolio", external: true },
 ];
 
 function Header() {
@@ -95,8 +96,9 @@ function Header() {
                 <MenuItem
                   key={page.label}
                   onClick={handleCloseNavMenu}
-                  component={Link}
+                  component={page.external ? "a" : Link}
                   href={page.href}
+                  {...(page.external && { target: "_blank", rel: "noopener noreferrer" })}
                 >
                   <Typography textAlign="center">{page.label}</Typography>
                 </MenuItem>
@@ -128,8 +130,9 @@ function Header() {
             {pages.map((page) => (
               <Button
                 key={page.label}
-                component={Link}
+                component={page.external ? "a" : Link}
                 href={page.href}
+                {...(page.external && { target: "_blank", rel: "noopener noreferrer" })}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
