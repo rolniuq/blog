@@ -22,7 +22,7 @@ export default function Body() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            My Daily Blog
+            Raymond&apos;s Notebook
           </Typography>
           <Typography
             variant="h6"

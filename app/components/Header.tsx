@@ -61,7 +61,7 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            My Blog
+            Raymond&apos;s Notebook
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -124,7 +124,7 @@ function Header() {
               textDecoration: "none",
             }}
           >
-            My Blog
+            Raymond&apos;s Notebook
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

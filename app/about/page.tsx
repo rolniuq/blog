@@ -2,7 +2,7 @@ import { Container, Typography, Box, Paper, Avatar } from "@mui/material";
 import Header from "@/app/components/Header";
 
 export const metadata = {
-  title: "About | My Blog",
+  title: "About | Raymond's Notebook",
   description: "Learn more about me and this blog",
 };
 

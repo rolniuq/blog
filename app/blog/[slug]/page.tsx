@@ -17,7 +17,7 @@ export async function generateMetadata({
     return { title: "Post Not Found" };
   }
   return {
-    title: `${post.title} | My Blog`,
+    title: `${post.title} | Raymond's Notebook`,
     description: post.excerpt,
   };
 }

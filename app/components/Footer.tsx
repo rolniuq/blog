@@ -24,7 +24,7 @@ function Footer() {
           }}
         >
           <Typography variant="body2" color="text.secondary">
-            {new Date().getFullYear()} My Blog. Built with Next.js.
+            {new Date().getFullYear()} Raymond&apos;s Notebook. Built with Next.js.
           </Typography>
           <Box sx={{ display: "flex", gap: 3 }}>
             <MuiLink
