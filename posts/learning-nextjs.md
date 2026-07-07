@@ -2,7 +2,7 @@
 title: "My Journey Learning Next.js"
 date: "2024-01-20"
 excerpt: "Exploring the powerful features of Next.js and why it's become my go-to framework for building React applications."
-coverImage: "/images/dev.png"
+coverImage: "/images/learning-nextjs.svg"
 tags: ["nextjs", "react", "webdev"]
 ---
 

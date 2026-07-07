@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4c1d95"/>
+      <stop offset="50%" stop-color="#6d28d9"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <!-- Two facing arrows / debate symbol -->
+  <path d="M200 150 L300 225 L200 300" stroke="rgba(255,255,255,0.3)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M600 150 L500 225 L600 300" stroke="rgba(255,255,255,0.3)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="300" y1="225" x2="500" y2="225" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="400" cy="225" r="8" fill="rgba(255,255,255,0.4)"/>
+  <text x="400" y="150" font-family="system-ui, sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="5">DEBATE PROTOCOL</text>
+  <text x="400" y="350" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">Dual Pincer</text>
+  <text x="400" y="380" font-family="system-ui, sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.55)" text-anchor="middle">Steelman → ← Red Team</text>
+</svg>

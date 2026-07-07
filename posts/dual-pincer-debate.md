@@ -2,7 +2,7 @@
 title: "Why I Built an AI That Argues With Itself"
 date: "2026-06-28"
 excerpt: "I got tired of AI giving me confident but shallow answers. So I built a debate system where two agents argue against each other — and what I learned changed how I think about being wrong."
-coverImage: "/images/dev.png"
+coverImage: "/images/dual-pincer-debate.svg"
 tags: ["ai", "opencode", "reasoning", "architecture", "personal"]
 ---
 

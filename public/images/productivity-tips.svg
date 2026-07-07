@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.1)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <circle cx="650" cy="100" r="120" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="150" cy="380" r="80" fill="rgba(255,255,255,0.04)"/>
+  <text x="400" y="160" font-family="system-ui, sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.6)" text-anchor="middle" letter-spacing="5">PRODUCTIVITY</text>
+  <text x="400" y="220" font-family="system-ui, sans-serif" font-size="52" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">5 Tips</text>
+  <text x="400" y="260" font-family="system-ui, sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.65)" text-anchor="middle">for Developers</text>
+  <line x1="330" y1="290" x2="470" y2="290" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <!-- checkmark list -->
+  <text x="340" y="330" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">✓ Time Blocking</text>
+  <text x="340" y="355" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">✓ Keyboard Shortcuts</text>
+  <text x="340" y="380" font-family="system-ui, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)">✓ Automate Tasks</text>
+</svg>

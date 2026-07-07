@@ -2,7 +2,7 @@
 title: "Hello World - My First Blog Post"
 date: "2024-01-15"
 excerpt: "Welcome to my blog! This is my first post where I share my journey into blogging and what you can expect from this space."
-coverImage: "/images/dev.png"
+coverImage: "/images/hello-world.svg"
 tags: ["introduction", "blogging"]
 ---
 

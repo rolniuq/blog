@@ -2,7 +2,7 @@
 title: "5 Productivity Tips for Developers"
 date: "2024-01-25"
 excerpt: "Simple yet effective productivity tips that have helped me become a more efficient developer."
-coverImage: "/images/dev.png"
+coverImage: "/images/productivity-tips.svg"
 tags: ["productivity", "tips", "developer"]
 ---
 
