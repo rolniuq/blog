@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  <!-- Terminal 1 (left) -->
+  <rect x="80" y="140" width="220" height="140" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <rect x="80" y="140" width="220" height="28" rx="8" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="96" cy="154" r="5" fill="#ef4444"/>
+  <circle cx="112" cy="154" r="5" fill="#fbbf24"/>
+  <circle cx="128" cy="154" r="5" fill="#22c55e"/>
+  <text x="190" y="159" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle">opencode FE</text>
+  <text x="96" y="196" font-family="monospace" font-size="12" fill="#22c55e">$ /communicator fe</text>
+  <text x="96" y="218" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.7)">  🤖 identified as "fe"</text>
+  <text x="96" y="240" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.5)">  📩 waiting for backend...</text>
+  <!-- Terminal 2 (right) -->
+  <rect x="500" y="140" width="220" height="140" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <rect x="500" y="140" width="220" height="28" rx="8" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="516" cy="154" r="5" fill="#ef4444"/>
+  <circle cx="532" cy="154" r="5" fill="#fbbf24"/>
+  <circle cx="548" cy="154" r="5" fill="#22c55e"/>
+  <text x="610" y="159" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle">opencode BE</text>
+  <text x="516" y="196" font-family="monospace" font-size="12" fill="#22c55e">$ /communicator be</text>
+  <text x="516" y="218" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.7)">  🤖 identified as "be"</text>
+  <text x="516" y="240" font-family="monospace" font-size="12" fill="rgba(255,255,255,0.5)">  📤 sent schema to fe</text>
+  <!-- Bridge/server (center) -->
+  <rect x="310" y="185" width="180" height="50" rx="25" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <text x="400" y="210" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.7)" text-anchor="middle">MCP Bridge</text>
+  <text x="400" y="226" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.35)" text-anchor="middle">localhost:9876</text>
+  <!-- Connection lines -->
+  <line x1="300" y1="210" x2="310" y2="210" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <line x1="490" y1="210" x2="500" y2="210" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <!-- Message packet traveling left to right -->
+  <rect x="330" y="260" width="140" height="28" rx="14" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.4)" stroke-width="1"/>
+  <text x="400" y="278" font-family="monospace" font-size="10" fill="#22c55e" text-anchor="middle">POST /api/auth {token, user}</text>
+  <!-- Title text -->
+  <text x="400" y="70" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">opencode-communicator</text>
+  <text x="400" y="98" font-family="system-ui, sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="2">MCP BRIDGE SERVER</text>
+  <!-- Footer labels -->
+  <text x="400" y="390" font-family="system-ui, sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)" text-anchor="middle">AI Agents Talking to Each Other</text>
+</svg>
