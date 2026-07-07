@@ -7,7 +7,7 @@ export default function Body() {
   const posts = getAllPosts();
 
   return (
-    <Box sx={{ bgcolor: "grey.50", minHeight: "calc(100vh - 64px)", py: 6 }}>
+    <Box sx={{ bgcolor: "background.default", minHeight: "calc(100vh - 64px)", py: 6 }}>
       <Container maxWidth="lg">
         <Box sx={{ mb: 6, textAlign: "center" }}>
           <Typography

@@ -8,66 +8,94 @@ const inter = Inter({
   display: "swap",
 });
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#1976d2",
-      light: "#42a5f5",
-      dark: "#1565c0",
+export function getTheme(mode: "light" | "dark") {
+  return createTheme({
+    typography: {
+      fontFamily: inter.style.fontFamily,
+      h1: { fontWeight: 700 },
+      h2: { fontWeight: 700 },
+      h3: { fontWeight: 700 },
+      h4: { fontWeight: 600 },
+      h5: { fontWeight: 600 },
+      h6: { fontWeight: 600 },
     },
-    grey: {
-      50: "#f8fafc",
-      100: "#f1f5f9",
-      200: "#e2e8f0",
-      300: "#cbd5e1",
-      900: "#0f172a",
+    shape: {
+      borderRadius: 8,
     },
-    background: {
-      default: "#f8fafc",
-      paper: "#ffffff",
-    },
-  },
-  typography: {
-    fontFamily: inter.style.fontFamily,
-    h1: {
-      fontWeight: 700,
-    },
-    h2: {
-      fontWeight: 700,
-    },
-    h3: {
-      fontWeight: 700,
-    },
-    h4: {
-      fontWeight: 600,
-    },
-    h5: {
-      fontWeight: 600,
-    },
-    h6: {
-      fontWeight: 600,
-    },
-  },
-  shape: {
-    borderRadius: 8,
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-          fontWeight: 500,
+    components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            textTransform: "none",
+            fontWeight: 500,
+          },
+        },
+      },
+      MuiCard: {
+        styleOverrides: {
+          root: {
+            borderRadius: 12,
+          },
+        },
+      },
+      MuiChip: {
+        styleOverrides: {
+          root: {
+            fontWeight: 500,
+          },
         },
       },
     },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          borderRadius: 12,
-        },
-      },
-    },
-  },
-});
+    palette:
+      mode === "light"
+        ? {
+            mode: "light" as const,
+            primary: {
+              main: "#1976d2",
+              light: "#42a5f5",
+              dark: "#1565c0",
+            },
+            grey: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              900: "#0f172a",
+            },
+            background: {
+              default: "#f8fafc",
+              paper: "#ffffff",
+            },
+            text: {
+              primary: "#0f172a",
+              secondary: "#475569",
+            },
+          }
+        : {
+            mode: "dark" as const,
+            primary: {
+              main: "#60a5fa",
+              light: "#93c5fd",
+              dark: "#3b82f6",
+            },
+            grey: {
+              50: "#0f172a",
+              100: "#1e293b",
+              200: "#334155",
+              300: "#475569",
+              900: "#f8fafc",
+            },
+            background: {
+              default: "#0b1120",
+              paper: "#1a2332",
+            },
+            text: {
+              primary: "#f1f5f9",
+              secondary: "#94a3b8",
+            },
+          },
+  });
+}
 
-export default theme;
+export const lightTheme = getTheme("light");
+export const darkTheme = getTheme("dark");

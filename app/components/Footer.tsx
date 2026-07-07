@@ -8,8 +8,8 @@ function Footer() {
       sx={{
         py: 4,
         mt: "auto",
-        bgcolor: "grey.100",
-        borderTop: "1px solid",
+        bgcolor: "background.paper",
+        borderTop: 1,
         borderColor: "grey.200",
       }}
     >

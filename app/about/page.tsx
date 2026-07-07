@@ -10,14 +10,14 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <Box sx={{ bgcolor: "grey.50", minHeight: "calc(100vh - 64px)", py: 6 }}>
+      <Box sx={{ bgcolor: "background.default", minHeight: "calc(100vh - 64px)", py: 6 }}>
         <Container maxWidth="md">
           <Paper
             elevation={0}
             sx={{
               p: { xs: 3, md: 5 },
               borderRadius: 3,
-              bgcolor: "white",
+              bgcolor: "background.paper",
             }}
           >
             <Box sx={{ textAlign: "center", mb: 4 }}>

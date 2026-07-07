@@ -15,6 +15,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Post } from "@/lib/posts";
 import { format } from "date-fns";
+import { useTheme } from "@mui/material/styles";
 
 interface BlogPostProps {
   post: Post;
@@ -22,28 +23,39 @@ interface BlogPostProps {
 
 export default function BlogPost({ post }: BlogPostProps) {
   const router = useRouter();
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
 
   const formattedDate = post.date
     ? format(new Date(post.date), "MMMM dd, yyyy")
     : "";
 
+  // Code block colors — stay dark in both modes for readability
+  const codeBlockBg = isDark ? "#070b12" : "#0f172a";
+  const codeBlockText = isDark ? "#e2e8f0" : "#f1f5f9";
+
   return (
-    <Box sx={{ minHeight: "100vh", bgcolor: "grey.50" }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        bgcolor: "background.default",
+      }}
+    >
       <Container maxWidth="md" sx={{ py: 4 }}>
         <IconButton
           onClick={() => router.back()}
-          sx={{ mb: 3 }}
+          sx={{ mb: 3, color: "text.secondary" }}
           aria-label="Go back"
         >
           <ArrowBackIcon />
         </IconButton>
 
         <Paper
-          elevation={0}
+          elevation={isDark ? 2 : 0}
           sx={{
             p: { xs: 3, md: 5 },
             borderRadius: 3,
-            bgcolor: "white",
+            bgcolor: "background.paper",
           }}
         >
           <Box sx={{ mb: 4 }}>
@@ -80,7 +92,7 @@ export default function BlogPost({ post }: BlogPostProps) {
                   label={tag}
                   size="small"
                   sx={{
-                    bgcolor: "primary.50",
+                    bgcolor: isDark ? "rgba(96, 165, 250, 0.12)" : "rgba(25, 118, 210, 0.08)",
                     color: "primary.main",
                     fontWeight: 500,
                   }}
@@ -103,7 +115,7 @@ export default function BlogPost({ post }: BlogPostProps) {
                 mt: 4,
                 mb: 2,
                 pb: 1,
-                borderBottom: "1px solid",
+                borderBottom: 1,
                 borderColor: "grey.200",
               },
               "& h3": {
@@ -132,7 +144,7 @@ export default function BlogPost({ post }: BlogPostProps) {
                 pl: 3,
                 py: 1,
                 my: 3,
-                bgcolor: "grey.50",
+                bgcolor: isDark ? "rgba(255,255,255,0.03)" : "grey.50",
                 borderRadius: "0 8px 8px 0",
                 "& p": {
                   fontStyle: "italic",
@@ -141,19 +153,21 @@ export default function BlogPost({ post }: BlogPostProps) {
                 },
               },
               "& pre": {
-                bgcolor: "grey.900",
-                color: "grey.100",
+                bgcolor: codeBlockBg,
+                color: codeBlockText,
                 p: 2,
                 borderRadius: 2,
                 overflow: "auto",
                 mb: 2,
                 fontSize: "0.875rem",
+                border: isDark ? "1px solid" : "none",
+                borderColor: isDark ? "grey.200" : "transparent",
               },
               "& code": {
                 fontFamily: "monospace",
               },
               "& :not(pre) > code": {
-                bgcolor: "grey.100",
+                bgcolor: isDark ? "rgba(255,255,255,0.06)" : "grey.100",
                 px: 0.75,
                 py: 0.25,
                 borderRadius: 1,
@@ -173,13 +187,13 @@ export default function BlogPost({ post }: BlogPostProps) {
                 mb: 2,
               },
               "& th, & td": {
-                border: "1px solid",
+                border: 1,
                 borderColor: "grey.300",
                 p: 1.5,
                 textAlign: "left",
               },
               "& th": {
-                bgcolor: "grey.100",
+                bgcolor: isDark ? "rgba(255,255,255,0.04)" : "grey.100",
                 fontWeight: 600,
               },
               "& img": {
@@ -189,7 +203,7 @@ export default function BlogPost({ post }: BlogPostProps) {
               "& hr": {
                 my: 4,
                 border: "none",
-                borderTop: "1px solid",
+                borderTop: 1,
                 borderColor: "grey.200",
               },
             }}

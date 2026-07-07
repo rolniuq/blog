@@ -27,7 +27,7 @@ export default function Article({
 
   return (
     <Card
-      sx={{
+      sx={(theme) => ({
         height: "100%",
         display: "flex",
         flexDirection: "column",
@@ -35,12 +35,22 @@ export default function Article({
         transition: "all 0.3s ease",
         borderRadius: 3,
         overflow: "hidden",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+        ...(theme.palette.mode === "dark" && {
+          border: 1,
+          borderColor: "grey.200",
+        }),
+        boxShadow:
+          theme.palette.mode === "dark"
+            ? "0 2px 8px rgba(0,0,0,0.3)"
+            : "0 2px 8px rgba(0,0,0,0.08)",
         "&:hover": {
           transform: "translateY(-4px)",
-          boxShadow: "0 12px 24px rgba(0,0,0,0.12)",
+          boxShadow:
+            theme.palette.mode === "dark"
+              ? "0 12px 24px rgba(0,0,0,0.5)"
+              : "0 12px 24px rgba(0,0,0,0.12)",
         },
-      }}
+      })}
       onClick={() => router.push(`/blog/${slug}`)}
     >
       <CardMedia
@@ -57,12 +67,15 @@ export default function Article({
               key={tag}
               label={tag}
               size="small"
-              sx={{
-                height: 22,
-                fontSize: "0.7rem",
-                bgcolor: "primary.50",
-                color: "primary.main",
-              }}
+                  sx={(theme) => ({
+                    height: 22,
+                    fontSize: "0.7rem",
+                    bgcolor:
+                      theme.palette.mode === "dark"
+                        ? "rgba(96, 165, 250, 0.12)"
+                        : "rgba(25, 118, 210, 0.08)",
+                    color: "primary.main",
+                  })}
             />
           ))}
         </Box>

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { ThemeProvider } from "@mui/material";
-import theme from "./theme";
+import { ThemeContextProvider } from "./context/ThemeContext";
+import ThemeRegistry from "./ThemeRegistry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+          <ThemeContextProvider>
+            <ThemeRegistry>{children}</ThemeRegistry>
+          </ThemeContextProvider>
         </AppRouterCacheProvider>
       </body>
     </html>
