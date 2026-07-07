@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   title: "My Blog - Daily Thoughts & Learnings",
   description:
     "A personal blog where I share my daily thoughts, learnings, and experiences through markdown posts.",
+  icons: {
+    icon: "/images/dev.png",
+    shortcut: "/images/dev.png",
+    apple: "/images/dev.png",
+  },
 };
 
 export default function RootLayout({
