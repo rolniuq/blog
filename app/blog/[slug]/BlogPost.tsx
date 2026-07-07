@@ -34,16 +34,29 @@ export default function BlogPost({ post }: BlogPostProps) {
   const codeBlockBg = isDark ? "#070b12" : "#0f172a";
   const codeBlockText = isDark ? "#e2e8f0" : "#f1f5f9";
 
+  const handleBackdropClick = () => {
+    router.push("/");
+  };
+
+  const handleContentClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <Box
+      onClick={handleBackdropClick}
       sx={{
         minHeight: "100vh",
         bgcolor: "background.default",
+        cursor: "pointer",
       }}
     >
       <Container maxWidth="md" sx={{ py: 4 }}>
         <IconButton
-          onClick={() => router.back()}
+          onClick={(e) => {
+            e.stopPropagation();
+            router.back();
+          }}
           sx={{ mb: 3, color: "text.secondary" }}
           aria-label="Go back"
         >
@@ -52,10 +65,12 @@ export default function BlogPost({ post }: BlogPostProps) {
 
         <Paper
           elevation={isDark ? 2 : 0}
+          onClick={handleContentClick}
           sx={{
             p: { xs: 3, md: 5 },
             borderRadius: 3,
             bgcolor: "background.paper",
+            cursor: "default",
           }}
         >
           <Box sx={{ mb: 4 }}>
