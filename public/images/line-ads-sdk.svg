@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+    <linearGradient id="gopher" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00add8"/>
+      <stop offset="100%" stop-color="#007d9c"/>
+    </linearGradient>
+    <linearGradient id="line-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06c755"/>
+      <stop offset="100%" stop-color="#04a044"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#glow)"/>
+  
+  <!-- Go Gopher head (simplified) -->
+  <ellipse cx="200" cy="200" rx="70" ry="60" fill="url(#gopher)"/>
+  <ellipse cx="165" cy="175" rx="12" ry="14" fill="white"/>
+  <ellipse cx="235" cy="175" rx="12" ry="14" fill="white"/>
+  <ellipse cx="168" cy="178" rx="5" ry="6" fill="#333"/>
+  <ellipse cx="238" cy="178" rx="5" ry="6" fill="#333"/>
+  <ellipse cx="165" cy="180" rx="3" ry="4" fill="white"/>
+  <ellipse cx="235" cy="180" rx="3" ry="4" fill="white"/>
+  
+  <!-- Go Gopher smile -->
+  <path d="M 175 210 Q 200 230 225 210" fill="none" stroke="#007d9c" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Go Gopher ears -->
+  <ellipse cx="145" cy="155" rx="15" ry="20" fill="#00add8" transform="rotate(-20 145 155)"/>
+  <ellipse cx="255" cy="155" rx="15" ry="20" fill="#00add8" transform="rotate(20 255 155)"/>
+  <ellipse cx="145" cy="155" rx="8" ry="12" fill="#ff69b4" transform="rotate(-20 145 155)"/>
+  <ellipse cx="255" cy="155" rx="8" ry="12" fill="#ff69b4" transform="rotate(20 255 155)"/>
+  
+  <!-- Go Gopher body -->
+  <ellipse cx="200" cy="270" rx="55" ry="40" fill="#00add8"/>
+  
+  <!-- Go text badge -->
+  <rect x="160" y="295" width="80" height="24" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="312" font-family="monospace" font-size="11" font-weight="700" fill="#00add8" text-anchor="middle">Go</text>
+
+  <!-- LINE Ads box (right side) -->
+  <rect x="420" y="120" width="300" height="200" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  <rect x="420" y="120" width="300" height="36" rx="12" fill="rgba(6,199,85,0.15)"/>
+  <rect x="420" y="144" width="300" height="12" fill="rgba(6,199,85,0.15)"/>
+  <text x="570" y="144" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#06c755" text-anchor="middle">LINE Ads API v3</text>
+  
+  <!-- Code lines in the box -->
+  <text x="438" y="182" font-family="monospace" font-size="11" fill="#22c55e">1</text>
+  <text x="450" y="182" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.85)">campaigns, err := svc.</text>
+  <text x="450" y="200" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.85)">    GetCampaigns(ctx, dto)</text>
+  
+  <text x="438" y="226" font-family="monospace" font-size="11" fill="#22c55e">2</text>
+  <text x="450" y="226" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.65)">for _, c := range campaigns {</text>
+  
+  <text x="438" y="250" font-family="monospace" font-size="11" fill="#22c55e">3</text>
+  <text x="450" y="250" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.65)">    fmt.Println(c.Name)</text>
+  
+  <text x="438" y="274" font-family="monospace" font-size="11" fill="#22c55e">4</text>
+  <text x="450" y="274" font-family="monospace" font-size="11" fill="rgba(255,255,255,0.65)">}</text>
+
+  <!-- JWS badge -->
+  <rect x="440" y="290" width="80" height="20" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="480" y="304" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">JWS Auth</text>
+  
+  <rect x="530" y="290" width="80" height="20" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="570" y="304" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">OAuth2</text>
+
+  <rect x="620" y="290" width="80" height="20" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="660" y="304" font-family="monospace" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Generics</text>
+
+  <!-- Package path -->
+  <rect x="420" y="328" width="300" height="24" rx="6" fill="rgba(255,255,255,0.04)"/>
+  <text x="570" y="344" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.3)" text-anchor="middle">github.com/rolniuq/line-ads</text>
+
+  <!-- Connection arrow from Go to LINE -->
+  <line x1="270" y1="220" x2="410" y2="220" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+  <polygon points="405,214 420,220 405,226" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Title -->
+  <text x="400" y="395" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">line-ads</text>
+  <text x="400" y="420" font-family="monospace" font-size="13" font-weight="400" fill="rgba(255,255,255,0.4)" text-anchor="middle">GO SDK FOR LINE ADS PLATFORM</text>
+</svg>
