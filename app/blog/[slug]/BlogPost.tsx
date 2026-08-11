@@ -30,9 +30,10 @@ export default function BlogPost({ post }: BlogPostProps) {
     ? format(new Date(post.date), "MMMM dd, yyyy")
     : "";
 
-  // Code block colors — stay dark in both modes for readability
-  const codeBlockBg = isDark ? "#070b12" : "#0f172a";
-  const codeBlockText = isDark ? "#e2e8f0" : "#f1f5f9";
+  // Code block colors — warm dark charcoal in both modes for readability
+  // (light mode uses a slightly heavier charcoal to keep contrast high)
+  const codeBlockBg = isDark ? "#1b1a19" : "#23221f";
+  const codeBlockText = isDark ? "#e6e4df" : "#f2f1ee";
 
   const handleBackdropClick = () => {
     router.push("/");
@@ -107,7 +108,7 @@ export default function BlogPost({ post }: BlogPostProps) {
                   label={tag}
                   size="small"
                   sx={{
-                    bgcolor: isDark ? "rgba(96, 165, 250, 0.12)" : "rgba(25, 118, 210, 0.08)",
+                    bgcolor: isDark ? "rgba(255, 122, 92, 0.14)" : "rgba(238, 77, 45, 0.1)",
                     color: "primary.main",
                     fontWeight: 500,
                   }}
@@ -155,7 +156,7 @@ export default function BlogPost({ post }: BlogPostProps) {
               },
               "& blockquote": {
                 borderLeft: "4px solid",
-                borderColor: "primary.main",
+                borderColor: "primary.dark",
                 pl: 3,
                 py: 1,
                 my: 3,
@@ -187,10 +188,10 @@ export default function BlogPost({ post }: BlogPostProps) {
                 py: 0.25,
                 borderRadius: 1,
                 fontSize: "0.875rem",
-                color: "primary.main",
+                color: isDark ? "primary.main" : "primary.dark",
               },
               "& a": {
-                color: "primary.main",
+                color: isDark ? "primary.main" : "primary.dark",
                 textDecoration: "none",
                 "&:hover": {
                   textDecoration: "underline",

@@ -8,6 +8,12 @@ const inter = Inter({
   display: "swap",
 });
 
+// Shopee orange + Claude Code warm surfaces.
+// Bright #ee4d2d is used for accents/buttons (3:1+ on dark for large elements),
+// while deeper #c8371b is used for link/text on light backgrounds to keep WCAG AA.
+// Dark mode surfaces are warm charcoal (#262625 / #2f2d2b) like Claude Code,
+// with a brighter coral-orange (#ff7a5c) for contrast on dark surfaces.
+
 export function getTheme(mode: "light" | "dark") {
   return createTheme({
     typography: {
@@ -51,48 +57,62 @@ export function getTheme(mode: "light" | "dark") {
         ? {
             mode: "light" as const,
             primary: {
-              main: "#1976d2",
-              light: "#42a5f5",
-              dark: "#1565c0",
+              main: "#ee4d2d", // Shopee orange
+              light: "#ff7a5c",
+              dark: "#c8371b", // deeper orange for link/text contrast on light bg
+              contrastText: "#ffffff",
             },
             grey: {
-              50: "#f8fafc",
-              100: "#f1f5f9",
-              200: "#e2e8f0",
-              300: "#cbd5e1",
-              900: "#0f172a",
+              50: "#faf9f7",
+              100: "#f2f1ee",
+              200: "#e5e3de",
+              300: "#d1cec8",
+              400: "#b3afa8",
+              500: "#8f8a82",
+              600: "#6d6862",
+              700: "#57524c",
+              800: "#3a3733",
+              900: "#232220",
             },
             background: {
-              default: "#f8fafc",
+              default: "#faf9f5", // warm off-white
               paper: "#ffffff",
             },
             text: {
-              primary: "#0f172a",
-              secondary: "#475569",
+              primary: "#1f1e1c", // warm near-black
+              secondary: "#6d6762",
             },
+            divider: "rgba(31,30,28,0.12)",
           }
         : {
             mode: "dark" as const,
             primary: {
-              main: "#60a5fa",
-              light: "#93c5fd",
-              dark: "#3b82f6",
+              main: "#ff7a5c", // brighter coral-orange for dark surfaces
+              light: "#ff9e87",
+              dark: "#e85c3e",
+              contrastText: "#1f1e1c", // dark text on bright orange buttons
             },
             grey: {
-              50: "#0f172a",
-              100: "#1e293b",
-              200: "#334155",
-              300: "#475569",
-              900: "#f8fafc",
+              50: "#2a2927",
+              100: "#33322f",
+              200: "#403e3b",
+              300: "#57544f",
+              400: "#6f6b65",
+              500: "#8a857e",
+              600: "#a29d96",
+              700: "#b8b4ad",
+              800: "#d3d0ca",
+              900: "#edebe6",
             },
             background: {
-              default: "#0b1120",
-              paper: "#1a2332",
+              default: "#262625", // warm charcoal (Claude Code)
+              paper: "#2f2d2b",
             },
             text: {
-              primary: "#f1f5f9",
-              secondary: "#94a3b8",
+              primary: "#edebe6", // warm off-white
+              secondary: "#a29d96",
             },
+            divider: "rgba(237,235,230,0.12)",
           },
   });
 }

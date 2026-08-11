@@ -32,6 +32,9 @@ function Footer() {
               href="/"
               color="text.secondary"
               underline="hover"
+              sx={{
+                "&:hover": { color: "primary.main" },
+              }}
             >
               Home
             </MuiLink>
@@ -40,6 +43,9 @@ function Footer() {
               href="/about"
               color="text.secondary"
               underline="hover"
+              sx={{
+                "&:hover": { color: "primary.main" },
+              }}
             >
               About
             </MuiLink>

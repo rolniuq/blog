@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
@@ -10,12 +10,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Raymond's Notebook",
   description:
-    "A personal blog where I share my daily thoughts, learnings, and experiences through markdown posts.",
-  icons: {
-    icon: "/images/dev.png",
-    shortcut: "/images/dev.png",
-    apple: "/images/dev.png",
-  },
+    "A personal developer blog — daily thoughts, hard-learned lessons, and experiments in software engineering, AI, and building things that ship.",
+};
+
+// Favicons are auto-served from the file convention:
+// app/icon.svg (modern browsers), app/icon.png (fallback),
+// app/apple-icon.png (iOS home screen).
+
+export const viewport: Viewport = {
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({

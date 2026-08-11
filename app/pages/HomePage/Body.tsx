@@ -16,7 +16,8 @@ export default function Body() {
             sx={{
               fontWeight: 700,
               mb: 2,
-              background: "linear-gradient(135deg, #1976d2 0%, #42a5f5 100%)",
+              background:
+                "linear-gradient(135deg, #ee4d2d 0%, #ff8a5c 100%)",
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -29,7 +30,8 @@ export default function Body() {
             color="text.secondary"
             sx={{ maxWidth: 600, mx: "auto" }}
           >
-            Thoughts, learnings, and experiences from my journey
+            Where code, AI, and hard-learned lessons meet — daily thoughts,
+            experiments, and things that ship.
           </Typography>
         </Box>
 

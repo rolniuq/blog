@@ -72,8 +72,8 @@ export default function Article({
                     fontSize: "0.7rem",
                     bgcolor:
                       theme.palette.mode === "dark"
-                        ? "rgba(96, 165, 250, 0.12)"
-                        : "rgba(25, 118, 210, 0.08)",
+                        ? "rgba(255, 122, 92, 0.14)"
+                        : "rgba(238, 77, 45, 0.1)",
                     color: "primary.main",
                   })}
             />

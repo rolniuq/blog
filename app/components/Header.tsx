@@ -12,7 +12,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import * as React from "react";
-import ThemeToggle from "./ThemeToggle";
 
 const pages = [
   { label: "Home", href: "/" },
@@ -150,8 +149,6 @@ function Header() {
               </Button>
             ))}
           </Box>
-
-          <ThemeToggle />
         </Toolbar>
       </Container>
     </AppBar>
