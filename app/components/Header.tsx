@@ -1,6 +1,5 @@
 "use client";
 import MenuIcon from "@mui/icons-material/Menu";
-import CreateIcon from "@mui/icons-material/Create";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,6 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import * as React from "react";
+import Pepe from "./Pepe";
 
 const pages = [
   { label: "Home", href: "/" },
@@ -44,9 +44,9 @@ function Header() {
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ minHeight: 64 }}>
-          <CreateIcon
-            sx={{ display: { xs: "none", md: "flex" }, mr: 1, color: "primary.main" }}
-          />
+          <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
+            <Pepe size={30} />
+          </Box>
           <Typography
             variant="h6"
             noWrap
@@ -106,9 +106,9 @@ function Header() {
             </Menu>
           </Box>
 
-          <CreateIcon
-            sx={{ display: { xs: "flex", md: "none" }, mr: 1, color: "primary.main" }}
-          />
+          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
+            <Pepe size={26} />
+          </Box>
           <Typography
             variant="h6"
             noWrap

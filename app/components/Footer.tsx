@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
 import Link from "next/link";
+import Pepe from "./Pepe";
 
 function Footer() {
   return (
@@ -23,9 +24,12 @@ function Footer() {
             gap: 2,
           }}
         >
-          <Typography variant="body2" color="text.secondary">
-            {new Date().getFullYear()} Raymond&apos;s Notebook. Built with Next.js.
-          </Typography>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Pepe size={22} />
+            <Typography variant="body2" color="text.secondary">
+              {new Date().getFullYear()} Raymond&apos;s Notebook. Built with Next.js.
+            </Typography>
+          </Box>
           <Box sx={{ display: "flex", gap: 3 }}>
             <MuiLink
               component={Link}
